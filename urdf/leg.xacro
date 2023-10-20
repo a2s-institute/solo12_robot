@@ -57,13 +57,13 @@
                 <xacro:if value="${is_front}">
                     <origin xyz="0.01950 0 0" rpy="0 0 0" />
                     <geometry>
-                        <mesh filename="package:///solo12_description/meshes/${mesh_ext}/solo12/solo12_hip_fe_fl.${mesh_ext}"/>
+                      <mesh filename="package://solo12_description/meshes/collision/hip_fe_fl.${mesh_ext}"/>
                     </geometry>
                 </xacro:if>
                 <xacro:unless value="${is_front}">
                     <origin xyz="-0.01950 0 0" rpy="0 0 0" />
                     <geometry>
-                        <mesh filename="package://robot_properties_solo/resources/meshes/${mesh_ext}/solo12/solo12_hip_fe_hl.${mesh_ext}"/>
+                      <mesh filename="package://solo12_description/meshes/collision/hip_fe_hl.${mesh_ext}"/>
                     </geometry>
                 </xacro:unless>
             </xacro:unless>
@@ -71,13 +71,13 @@
                 <xacro:if value="${is_front}">
                     <origin xyz="0.01950 0 0" rpy="0 0 0" />
                     <geometry>
-                        <mesh filename="package://robot_properties_solo/resources/meshes/${mesh_ext}/solo12/solo12_hip_fe_fr.${mesh_ext}"/>
+                        <mesh filename="package://solo12_description/meshes/collision/hip_fe_fr.${mesh_ext}"/>
                     </geometry>
                 </xacro:if>
                 <xacro:unless value="${is_front}">
                     <origin xyz="-0.01950 0 0" rpy="0 0 0" />
                     <geometry>
-                        <mesh filename="package://robot_properties_solo/resources/meshes/${mesh_ext}/solo12/solo12_hip_fe_hr.${mesh_ext}"/>
+                        <mesh filename="package://solo12_description/meshes/collision/hip_fe_hr.${mesh_ext}"/>
                     </geometry>
                 </xacro:unless>
             </xacro:if>
@@ -91,13 +91,13 @@
                 <xacro:if value="${is_front}">
                     <origin xyz="0.01950 0 0" rpy="0 0 0" />
                     <geometry>
-                        <mesh filename="package://robot_properties_solo/resources/meshes/${mesh_ext}/solo12/solo12_hip_fe_fl.${mesh_ext}"/>
+                        <mesh filename="package://solo12_description/meshes/collision/hip_fe_fl.${mesh_ext}"/>
                     </geometry>
                 </xacro:if>
                 <xacro:unless value="${is_front}">
                     <origin xyz="-0.01950 0 0" rpy="0 0 0" />
                     <geometry>
-                        <mesh filename="package://robot_properties_solo/resources/meshes/${mesh_ext}/solo12/solo12_hip_fe_hl.${mesh_ext}"/>
+                      <mesh filename="package://solo12_description/meshes/collision/hip_fe_hl.${mesh_ext}"/>
                     </geometry>
                 </xacro:unless>
             </xacro:unless>
@@ -105,13 +105,13 @@
                 <xacro:if value="${is_front}">
                     <origin xyz="0.01950 0 0" rpy="0 0 0" />
                     <geometry>
-                        <mesh filename="package://robot_properties_solo/resources/meshes/${mesh_ext}/solo12/solo12_hip_fe_fr.${mesh_ext}"/>
+                        <mesh filename="package://solo12_description/meshes/collision/hip_fe_fr.${mesh_ext}"/>
                     </geometry>
                 </xacro:if>
                 <xacro:unless value="${is_front}">
                     <origin xyz="-0.01950 0 0" rpy="0 0 0" />
                     <geometry>
-                        <mesh filename="package://robot_properties_solo/resources/meshes/${mesh_ext}/solo12/solo12_hip_fe_hr.${mesh_ext}"/>
+                        <mesh filename="package://solo12_description/meshes/collision/hip_fe_hr.${mesh_ext}"/>
                     </geometry>
                 </xacro:unless>
             </xacro:if>
@@ -239,10 +239,10 @@
         <origin xyz="0 0 0" rpy="0 0 0" />
         <geometry>
           <xacro:unless value="${is_right}">
-            <mesh filename="package://robot_properties_solo/resources/meshes/${mesh_ext}/without_foot/solo_upper_leg_left_side.${mesh_ext}"/>
+            <mesh filename="package://solo12_description/meshes/collision/isolated_upper_leg_left_side.${mesh_ext}"/>
           </xacro:unless>
           <xacro:if value="${is_right}">
-            <mesh filename="package://robot_properties_solo/resources/meshes/${mesh_ext}/without_foot/solo_upper_leg_right_side.${mesh_ext}"/>
+            <mesh filename="package://solo12_description/meshes/collision/isolated_upper_leg_right_side.${mesh_ext}"/>
           </xacro:if>
         </geometry>
         <material name="${color_name}">
@@ -254,10 +254,10 @@
         <origin xyz="0 0 0" rpy="0 0 0" />
         <geometry>
           <xacro:unless value="${is_right}">
-            <mesh filename="package://robot_properties_solo/resources/meshes/${mesh_ext}/without_foot/solo_upper_leg_left_side.${mesh_ext}"/>
+            <mesh filename="package://solo12_description/meshes/collision/isolated_upper_leg_left_side.${mesh_ext}"/>
           </xacro:unless>
           <xacro:if value="${is_right}">
-            <mesh filename="package://robot_properties_solo/resources/meshes/${mesh_ext}/without_foot/solo_upper_leg_right_side.${mesh_ext}"/>
+            <mesh filename="package://solo12_description/meshes/collision/isolated_upper_leg_right_side.${mesh_ext}"/>
           </xacro:if>
         </geometry>
         <material name="${color_name}">
@@ -326,10 +326,10 @@
         <origin xyz="0 0 0" rpy="0 0 0" />
         <geometry>
           <xacro:unless value="${is_right}">
-            <mesh filename="package://robot_properties_solo/resources/meshes/${mesh_ext}/without_foot/solo_lower_leg_v2_left_side.${mesh_ext}"/>
+            <mesh filename="package://solo12_description/meshes/collision/isolated_lower_leg_v2_left_side.${mesh_ext}"/>
           </xacro:unless>
           <xacro:if value="${is_right}">
-            <mesh filename="package://robot_properties_solo/resources/meshes/${mesh_ext}/without_foot/solo_lower_leg_v2_right_side.${mesh_ext}"/>
+            <mesh filename="package://solo12_description/meshes/collision/isolated_lower_leg_v2_right_side.${mesh_ext}"/>
           </xacro:if>
         </geometry>
         <material name="${color_name}">
@@ -341,10 +341,10 @@
         <origin xyz="0 0 0" rpy="0 0 0" />
         <geometry>
           <xacro:unless value="${is_right}">
-            <mesh filename="package://robot_properties_solo/resources/meshes/${mesh_ext}/without_foot/solo_lower_leg_v2_left_side.${mesh_ext}"/>
+            <mesh filename="package://solo12_description/meshes/collision/isolated_lower_leg_v2_left_side.${mesh_ext}"/>
           </xacro:unless>
           <xacro:if value="${is_right}">
-            <mesh filename="package://robot_properties_solo/resources/meshes/${mesh_ext}/without_foot/solo_lower_leg_v2_right_side.${mesh_ext}"/>
+            <mesh filename="package://solo12_description/meshes/collision/isolated_lower_leg_v2_right_side.${mesh_ext}"/>
           </xacro:if>
         </geometry>
         <material name="${color_name}">
