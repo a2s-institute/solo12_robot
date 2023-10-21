@@ -13,9 +13,12 @@ def generate_launch_description():
     rviz_config_file = PathJoinSubstitution([FindPackageShare(package_name), "rviz", "solo12.rviz"])
     
     # Get URDF path
-    robot_description_content = os.path.join(get_package_share_directory(package_name), 'urdf', 'solo12.urdf')
+    urdf_path = os.path.join(get_package_share_directory(package_name), 'urdf', 'solo12.urdf')
+    
+    with open(urdf_path, "r") as urdf:
+        robot_desc = urdf.read()
 
-    robot_description = {"robot_description": open(robot_description_content).read()}
+    robot_description = {"robot_description": robot_desc}
 
     joint_state_publisher_node = Node(
         package="joint_state_publisher_gui",
@@ -32,7 +35,7 @@ def generate_launch_description():
         executable="rviz2",
         name="rviz2",
         output="log",
-        # arguments=["-d", rviz_config_file],
+        arguments=["-d", rviz_config_file],
     )
 
     return LaunchDescription(
