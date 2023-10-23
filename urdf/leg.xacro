@@ -1,5 +1,4 @@
 <?xml version="1.0"?>
-
 <robot xmlns:xacro="http://playerstage.sourceforge.net/gazebo/xmlschema/#interface" name="solo">
 
   <!-- See https://github.com/open-dynamic-robot-initiative/open_robot_actuator_hardware/blob/master/mechanics/quadruped_robot_12dof_v1/README.md#quadruped-robot-12dof-v1 -->
@@ -57,13 +56,13 @@
                 <xacro:if value="${is_front}">
                     <origin xyz="0.01950 0 0" rpy="0 0 0" />
                     <geometry>
-                      <mesh filename="package://solo12_description/meshes/collision/hip_fe_fl.${mesh_ext}"/>
+              <mesh filename="file://$(find solo12_description)/meshes/collision/hip_fe_fl.${mesh_ext}"/>
                     </geometry>
                 </xacro:if>
                 <xacro:unless value="${is_front}">
                     <origin xyz="-0.01950 0 0" rpy="0 0 0" />
                     <geometry>
-                      <mesh filename="package://solo12_description/meshes/collision/hip_fe_hl.${mesh_ext}"/>
+                      <mesh filename="file://$(find solo12_description)/meshes/collision/hip_fe_hl.${mesh_ext}"/>
                     </geometry>
                 </xacro:unless>
             </xacro:unless>
@@ -71,13 +70,13 @@
                 <xacro:if value="${is_front}">
                     <origin xyz="0.01950 0 0" rpy="0 0 0" />
                     <geometry>
-                        <mesh filename="package://solo12_description/meshes/collision/hip_fe_fr.${mesh_ext}"/>
+                        <mesh filename="file://$(find solo12_description)/meshes/collision/hip_fe_fr.${mesh_ext}"/>
                     </geometry>
                 </xacro:if>
                 <xacro:unless value="${is_front}">
                     <origin xyz="-0.01950 0 0" rpy="0 0 0" />
                     <geometry>
-                        <mesh filename="package://solo12_description/meshes/collision/hip_fe_hr.${mesh_ext}"/>
+                        <mesh filename="file://$(find solo12_description)/meshes/collision/hip_fe_hr.${mesh_ext}"/>
                     </geometry>
                 </xacro:unless>
             </xacro:if>
@@ -91,13 +90,13 @@
                 <xacro:if value="${is_front}">
                     <origin xyz="0.01950 0 0" rpy="0 0 0" />
                     <geometry>
-                        <mesh filename="package://solo12_description/meshes/collision/hip_fe_fl.${mesh_ext}"/>
+                        <mesh filename="file://$(find solo12_description)/meshes/collision/hip_fe_fl.${mesh_ext}"/>
                     </geometry>
                 </xacro:if>
                 <xacro:unless value="${is_front}">
                     <origin xyz="-0.01950 0 0" rpy="0 0 0" />
                     <geometry>
-                      <mesh filename="package://solo12_description/meshes/collision/hip_fe_hl.${mesh_ext}"/>
+                      <mesh filename="file://$(find solo12_description)/meshes/collision/hip_fe_hl.${mesh_ext}"/>
                     </geometry>
                 </xacro:unless>
             </xacro:unless>
@@ -105,13 +104,13 @@
                 <xacro:if value="${is_front}">
                     <origin xyz="0.01950 0 0" rpy="0 0 0" />
                     <geometry>
-                        <mesh filename="package://solo12_description/meshes/collision/hip_fe_fr.${mesh_ext}"/>
+                        <mesh filename="file://$(find solo12_description)/meshes/collision/hip_fe_fr.${mesh_ext}"/>
                     </geometry>
                 </xacro:if>
                 <xacro:unless value="${is_front}">
                     <origin xyz="-0.01950 0 0" rpy="0 0 0" />
                     <geometry>
-                        <mesh filename="package://solo12_description/meshes/collision/hip_fe_hr.${mesh_ext}"/>
+                        <mesh filename="file://$(find solo12_description)/meshes/collision/hip_fe_hr.${mesh_ext}"/>
                     </geometry>
                 </xacro:unless>
             </xacro:if>
@@ -239,10 +238,10 @@
         <origin xyz="0 0 0" rpy="0 0 0" />
         <geometry>
           <xacro:unless value="${is_right}">
-            <mesh filename="package://solo12_description/meshes/collision/isolated_upper_leg_left_side.${mesh_ext}"/>
+            <mesh filename="file://$(find solo12_description)/meshes/collision/isolated_upper_leg_left_side.${mesh_ext}"/>
           </xacro:unless>
           <xacro:if value="${is_right}">
-            <mesh filename="package://solo12_description/meshes/collision/isolated_upper_leg_right_side.${mesh_ext}"/>
+            <mesh filename="file://$(find solo12_description)/meshes/collision/isolated_upper_leg_right_side.${mesh_ext}"/>
           </xacro:if>
         </geometry>
         <material name="${color_name}">
@@ -254,10 +253,10 @@
         <origin xyz="0 0 0" rpy="0 0 0" />
         <geometry>
           <xacro:unless value="${is_right}">
-            <mesh filename="package://solo12_description/meshes/collision/isolated_upper_leg_left_side.${mesh_ext}"/>
+            <mesh filename="file://$(find solo12_description)/meshes/collision/isolated_upper_leg_left_side.${mesh_ext}"/>
           </xacro:unless>
           <xacro:if value="${is_right}">
-            <mesh filename="package://solo12_description/meshes/collision/isolated_upper_leg_right_side.${mesh_ext}"/>
+            <mesh filename="file://$(find solo12_description)/meshes/collision/isolated_upper_leg_right_side.${mesh_ext}"/>
           </xacro:if>
         </geometry>
         <material name="${color_name}">
@@ -326,10 +325,10 @@
         <origin xyz="0 0 0" rpy="0 0 0" />
         <geometry>
           <xacro:unless value="${is_right}">
-            <mesh filename="package://solo12_description/meshes/collision/isolated_lower_leg_v2_left_side.${mesh_ext}"/>
+            <mesh filename="file://$(find solo12_description)/meshes/collision/isolated_lower_leg_v2_left_side.${mesh_ext}"/>
           </xacro:unless>
           <xacro:if value="${is_right}">
-            <mesh filename="package://solo12_description/meshes/collision/isolated_lower_leg_v2_right_side.${mesh_ext}"/>
+            <mesh filename="file://$(find solo12_description)/meshes/collision/isolated_lower_leg_v2_right_side.${mesh_ext}"/>
           </xacro:if>
         </geometry>
         <material name="${color_name}">
@@ -341,10 +340,10 @@
         <origin xyz="0 0 0" rpy="0 0 0" />
         <geometry>
           <xacro:unless value="${is_right}">
-            <mesh filename="package://solo12_description/meshes/collision/isolated_lower_leg_v2_left_side.${mesh_ext}"/>
+            <mesh filename="file://$(find solo12_description)/meshes/collision/isolated_lower_leg_v2_left_side.${mesh_ext}"/>
           </xacro:unless>
           <xacro:if value="${is_right}">
-            <mesh filename="package://solo12_description/meshes/collision/isolated_lower_leg_v2_right_side.${mesh_ext}"/>
+            <mesh filename="file://$(find solo12_description)/meshes/collision/isolated_lower_leg_v2_right_side.${mesh_ext}"/>
           </xacro:if>
         </geometry>
         <material name="${color_name}">
@@ -381,10 +380,10 @@
       <!-- FOOT INERTIAL -->
       <inertial>
         <origin xyz="0 0 0" rpy="0 0 0" />
-        <mass value="0.0"/>
-        <inertia ixx="0.0" ixy="0.0" ixz="0.0"
-                           iyy="0.0" iyz="0.0"
-                                     izz="0.0"/>
+        <mass value="0.01"/>
+        <inertia ixx="0.002" ixy="0.0" ixz="0.0"
+                           iyy="0.002" iyz="0.0"
+                                     izz="0.002"/>
       </inertial>
     </link> <!-- END FOOT LINK -->
 

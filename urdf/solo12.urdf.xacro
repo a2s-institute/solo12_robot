@@ -26,7 +26,8 @@
     <visual>
         <origin xyz="0 0 0" rpy="0 0 0" />
         <geometry>
-          <mesh filename="package://solo12_description/meshes/collision/base.${mesh_ext}"/>
+      <!-- <box size="0.1 0.1 0.1"/>-->
+      <mesh filename="file://$(find solo12_description)/meshes/collision/base.${mesh_ext}"/>
         </geometry>
         <material name="${color_name}">
             <color rgba="${color} ${opacity}"/>
@@ -36,7 +37,7 @@
     <collision>
         <origin xyz="0 0 0" rpy="0 0 0" />
         <geometry>
-          <mesh filename="package://solo12_description/meshes/collision/base.${mesh_ext}"/>
+      <mesh filename="file://$(find solo12_description)/meshes/collision/base.${mesh_ext}"/>
         </geometry>
         <material name="${color_name}">
             <color rgba="${color} ${opacity}"/>
