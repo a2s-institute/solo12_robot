@@ -1,1 +1,1 @@
-# `solo12_description`
+# SOLO 12 Robot
