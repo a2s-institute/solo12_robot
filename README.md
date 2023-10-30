@@ -28,5 +28,6 @@ git clone https://github.com/a2s-institute/master-board.git
 cd master-board/sdk/master_board_sdk
 mkdir build && cd build
 cmake -DBUILD_PYTHON_INTERFACE=ON -DCMAKE_BUILD_TYPE=RELEASE ..
+make
 sudo make install
 ```
