@@ -31,3 +31,11 @@ cmake -DBUILD_PYTHON_INTERFACE=ON -DCMAKE_BUILD_TYPE=RELEASE ..
 make
 sudo make install
 ```
+
+3. Install Gazebo 11 (Classic)
+
+```
+curl -sSL http://get.gazebosim.org | sh
+```
+
+this one-liner come from [Install Gazebo using Ubuntu packages](https://classic.gazebosim.org/tutorials?tut=install_ubuntu&cat=install)
