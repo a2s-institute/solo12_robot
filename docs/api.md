@@ -1,4 +1,4 @@
-# API Specification (solodev)
+# API Specification
 
 **Status**: Draft
 **Version**: 0.0.0
