@@ -10,7 +10,15 @@ To launch the robot in gazebo (prototyping purposes):
 ros2 launch solo12_bringup robot.launch.py
 ```
 
-## Manual Installation
+## Automatic Installation (Recommended)
+
+from the `ROOT` folder of this repo:
+
+```
+bash script/install.sh
+```
+
+## Manual Installation (deprecated)
 
 Requeriments:
 - curl
