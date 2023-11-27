@@ -1,1 +1,1 @@
-sudo docker build -t solo-image -f Dockerfile .
+sudo docker build --rm -t solo-image -f Dockerfile .
