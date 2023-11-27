@@ -1,4 +1,4 @@
-sudo xhost +si:localuser:host
+sudo xhost +local:*
 
 sudo docker run -it --rm --network host -e DISPLAY=$DISPLAY \
     -v /tmp/.X11-unix/:/tmp/.X11-unix/ \
