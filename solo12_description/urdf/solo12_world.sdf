@@ -1,0 +1,20 @@
+<?xml version="1.0" ?>
+<sdf version="1.7">
+  <world name="solo12_world">
+    <!-- Include a ground plane -->
+    <include>
+      <uri>model://ground_plane</uri>
+    </include>
+
+    <!-- Include the Sun (default lighting) -->
+    <include>
+      <uri>model://sun</uri>
+    </include>
+
+    <!-- Include your solo12 model -->
+    <include>
+      <uri>model://solo12</uri>
+    </include>
+  </world>
+</sdf>
+
