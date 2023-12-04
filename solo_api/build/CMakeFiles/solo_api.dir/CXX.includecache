@@ -1,0 +1,28 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/akhilan/Downloads/2_SDP/git_ws_SDP/solo12_robot/solo_api/src/example.cpp
+assert.h
+-
+unistd.h
+-
+chrono
+-
+math.h
+-
+stdio.h
+-
+sys/stat.h
+-
+iostream
+-
+master_board_sdk/master_board_interface.h
+/home/akhilan/Downloads/2_SDP/git_ws_SDP/solo12_robot/solo_api/src/master_board_sdk/master_board_interface.h
+master_board_sdk/defines.h
+/home/akhilan/Downloads/2_SDP/git_ws_SDP/solo12_robot/solo_api/src/master_board_sdk/defines.h
+
