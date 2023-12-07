@@ -41,6 +41,14 @@ def generate_launch_description():
     # robot description parameter composition
     robot_description = {"robot_description": xacro.process_file(urdf_path).toxml()}
 
+    gazebo_configuration = PathJoinSubstitution(
+        [
+            FindPackageShare("solo12_description"),
+            "config",
+            "gazebo.yaml"
+        ]
+    )
+
     gazebo = IncludeLaunchDescription(
         PathJoinSubstitution(
             [
@@ -48,7 +56,10 @@ def generate_launch_description():
                 "launch",
                 "gazebo.launch.py"
             ]
-        )
+        ),
+        launch_arguments={
+            "extra_gazebo_args": f"--ros-args --params-file {gazebo_configuration}"
+        }.items()
     )
 
     spawn_entity_node = Node(
