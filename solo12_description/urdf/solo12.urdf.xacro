@@ -10,6 +10,8 @@
   <xacro:property name="opacity" value="1.0" />
   <xacro:property name="mesh_ext" value="stl" />
 
+  <xacro:include filename="solo12.ros2_control.xacro"/>
+
   <!-- This file is based on: https://github.com/open-dynamic-robot-initiative/open_robot_actuator_hardware/blob/master/mechanics/quadruped_robot_12dof_v1/README.md#quadruped-robot-12dof-v1 -->
   <link name="base_link">
     <!-- BASE LINK INERTIAL -->
