@@ -1,7 +1,7 @@
 import os
+import xacro
 from launch.event_handlers import OnProcessExit
 from launch.launch_context import LaunchContext
-import xacro
 from launch import LaunchDescription
 from launch.conditions import IfCondition
 from launch.actions import DeclareLaunchArgument, ExecuteProcess, IncludeLaunchDescription, RegisterEventHandler
@@ -101,7 +101,11 @@ def generate_launch_description():
         package="gazebo_ros",
         executable="spawn_entity.py",
         name="spawn_entity",
-        arguments=['-topic', "robot_description", "-entity", "solo12"]
+        arguments=['-topic', "robot_description",
+                   "-x", "0.0",
+                   "-y", "0.0",
+                   "-z", "0.54", 
+                   "-entity", "solo12"]
     )
 
     joint_state_broadcaster_spawner = Node(
