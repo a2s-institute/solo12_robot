@@ -4,7 +4,7 @@ from launch.launch_context import LaunchContext
 import xacro
 from launch import LaunchDescription
 from launch.conditions import IfCondition
-from launch.actions import DeclareLaunchArgument, IncludeLaunchDescription, RegisterEventHandler
+from launch.actions import DeclareLaunchArgument, ExecuteProcess, IncludeLaunchDescription, RegisterEventHandler
 from launch.substitutions import Command, FindExecutable, LaunchConfiguration, PathJoinSubstitution
 from launch_ros.actions import Node
 from launch_ros.substitutions import FindPackageShare
@@ -37,6 +37,25 @@ def generate_launch_description():
         'urdf',
         'solo12.urdf.xacro'
     )
+
+    spawn_stand = ExecuteProcess(
+        cmd=[
+            "xacro",
+            PathJoinSubstitution(
+                [
+                    FindPackageShare("solo12_description"),
+                    "urdf",
+                    "stand.urdf"
+                ]
+            ),
+            "|",
+            "ros2", "run", "gazebo_ros", "spawn_entity.py", "-stdin", "-entity", "stand"
+        ],
+        output="both",
+        shell=True
+    )
+
+    # os.system(f"xacro {os.path.join(get_package_share_directory('solo12_description'),'urdf','stand.urdf')} | ros2 run gazebo_ros spawn_entity.py -stdin -entity stand")
 
     # robot description parameter composition
     robot_description = {"robot_description": xacro.process_file(urdf_path).toxml()}
@@ -111,6 +130,7 @@ def generate_launch_description():
             gazebo,
             robot_state_pub_node,
             spawn_entity_node,
+            spawn_stand,
             joint_state_broadcaster_spawner,
             delay_rviz
         ]
