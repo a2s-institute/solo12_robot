@@ -21,7 +21,16 @@ def generate_launch_description():
             description="Start RViz2 automatically with this launch file.")
     )
 
+    declared_arguments.append(
+        DeclareLaunchArgument(
+            "stand",
+            default_value="false",
+            description="Spawn stand for the robot."
+        )
+    )
+
     use_rviz = LaunchConfiguration("use_rviz")
+    stand_arg = LaunchConfiguration("stand")
 
     rviz_config_file = PathJoinSubstitution(
         [
@@ -38,6 +47,14 @@ def generate_launch_description():
         'solo12.urdf.xacro'
     )
 
+    # Spawn stand as a different entity.
+    #
+    # The first part of the command parse the urdf file
+    # using the `xacro` command, this is required to resolved
+    # the path of the meshes in the urdf file.
+    # The second part use the `spawn_entity.py` node with 
+    # the option `-stdin` that get the urdf from the standard
+    # input.
     spawn_stand = ExecuteProcess(
         cmd=[
             "xacro",
@@ -52,10 +69,9 @@ def generate_launch_description():
             "ros2", "run", "gazebo_ros", "spawn_entity.py", "-stdin", "-entity", "stand"
         ],
         output="both",
-        shell=True
+        shell=True,
+        condition=IfCondition(stand_arg)
     )
-
-    # os.system(f"xacro {os.path.join(get_package_share_directory('solo12_description'),'urdf','stand.urdf')} | ros2 run gazebo_ros spawn_entity.py -stdin -entity stand")
 
     # robot description parameter composition
     robot_description = {"robot_description": xacro.process_file(urdf_path).toxml()}
