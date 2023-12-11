@@ -1,5 +1,7 @@
 # solo12_robot
 
+![build status main](https://github.com/a2s-institute/solo12_robot/actions/workflows/main.yaml/badge.svg)
+
 Base code for Nala robot (SOLO12 robot from Open Dynamic Robot Initiative)
 
 ## Installation
