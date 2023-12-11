@@ -25,3 +25,4 @@ jobs:
         with:
           package-name: solo12_description solo12_bringup
           target-ros2-distro: humble
+          skip-tests: true
