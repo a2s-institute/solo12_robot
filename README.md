@@ -2,13 +2,32 @@
 
 Base code for Nala robot (SOLO12 robot from Open Dynamic Robot Initiative)
 
+## Installation
 
-## Installation (Standalone)
+Install the required dependencies by runing the following command the in ROOT directory of your workspace:
 
-> This installation do not requerire ROS
+```bash
+rosdep install --from-paths src --ignore-src -r -y
+```
 
-from the `ROOT` folder of this repo:
+## Usage
+
+To launch the system use:
+
+```bash
+ros2 launch solo12_bringup robot.launch.py
+```
+
+Launch arguments:
+- `stand`: Spawn robot on stand (default false).
+- `use_rviz`: Run rviz (default true).
+
+Example:
 
 ```
-bash script/install.sh
+ros2 launch solo12_bringup robot.launch.py stand:=true use_rviz:=false
 ```
+
+## Packages
+
+For information about packages, please refer the `README.md` file of each package.
