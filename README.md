@@ -9,7 +9,7 @@ Base code of the controller of the Nala robot (SOLO12 robot from exisiting examp
 
 ### Notes
 
-*For Basic Understandings of structure of C++*
+**For Basic Understandings of structure of C++**
 
 - The constructor and desturctor is used to run the class only when it is required,
 - But, in order to save the memory space, we can use the destructor to delete or erase the constructor to free the space
