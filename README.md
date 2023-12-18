@@ -1,14 +1,7 @@
 # solo12_robot
 
-Base code for Nala robot (SOLO12 robot from Open Dynamic Robot Initiative)
+Base code of the controller of the Nala robot (SOLO12 robot from exisiting examples from the master-board/sdk/masterboard-sdk/examples/)
 
+### Required to do
 
-## Installation (Standalone)
-
-> This installation do not requerire ROS
-
-from the `ROOT` folder of this repo:
-
-```
-bash script/install.sh
-```
+[-]Use the existing example files as controllers in the abstarct layer by calling them as a library file
