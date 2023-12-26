@@ -2,6 +2,8 @@
 
 Base code for Nala robot (SOLO12 robot from Open Dynamic Robot Initiative)
 
+## This version is not ready yet
+#To run it requires custom change of base directories and replacing the solol12.sdf file at model folder and colntrol plugin location.
 
 ## Installation (Standalone)
 

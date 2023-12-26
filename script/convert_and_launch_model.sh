@@ -1,20 +1,19 @@
 #!/bin/bash
 
-# Source ROS 2 Humble and local workspace setup
-source /opt/ros/humble/setup.bash
-source ~/sdp_ws/install/setup.bash
+# Define the path to the solo12_robot folder relative to this script
+SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )"
 
-# Define the relative paths to the URDF and SDF files
-xacro_file="~/sdp_ws/src/solo12_robot/solo12_description/urdf/solo12.urdf.xacro"
-urdf_file="~/sdp_ws/src/solo12_robot/solo12_description/urdf/solo12.urdf"
-sdf_file="~/sdp_ws/src/solo12_robot/solo12_description/urdf/solo12.sdf"
+#Does the SOLO12_ROBOT_DIR points to .. (one folder back? then its ok
+SOLO12_ROBOT_DIR="$(dirname "$SCRIPT_DIR")"
 
-# Convert URDF.xacro to URDF
-xacro $xacro_file > $urdf_file
+# Run the Python script
+python3 "$SCRIPT_DIR/script.py"
 
-# Convert URDF to SDF
-gz sdf -p $urdf_file > $sdf_file
+# Define the path to the Gazebo world file
+sdf_world_file="$SOLO12_ROBOT_DIR/solo12_description/urdf/solo12_world.sdf"
+
+# Export GAZEBO_MODEL_PATH
+export GAZEBO_MODEL_PATH=$GAZEBO_MODEL_PATH:$SOLO12_ROBOT_DIR/solo12_description/models
 
 # Start the model in Gazebo
-gazebo $sdf_file
-
+gazebo --verbose "$sdf_world_file"

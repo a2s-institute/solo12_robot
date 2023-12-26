@@ -18,7 +18,7 @@
         <geometry>
           <mesh>
             <scale>1 1 1</scale>
-            <uri>file:///home/pratik/sdp_ws/src/install/solo12_description/share/solo12_description/meshes/collision/base.stl</uri>
+            <uri>file:///home/pratik/sdp/Old_Files/solo12_robot/solo12_description/solo12_description/meshes/collision/base.stl</uri>
           </mesh>
         </geometry>
       </collision>
@@ -27,7 +27,7 @@
         <geometry>
           <mesh>
             <scale>1 1 1</scale>
-            <uri>file:///home/pratik/sdp_ws/src/install/solo12_description/share/solo12_description/meshes/collision/base.stl</uri>
+            <uri>file:///home/pratik/sdp/Old_Files/solo12_robot/solo12_description/solo12_description/meshes/collision/base.stl</uri>
           </mesh>
         </geometry>
       </visual>
@@ -71,7 +71,7 @@
         <geometry>
           <mesh>
             <scale>1 1 1</scale>
-            <uri>file:///home/pratik/sdp_ws/src/install/solo12_description/share/solo12_description/meshes/collision/hip_fe_fl.stl</uri>
+            <uri>file:///home/pratik/sdp/Old_Files/solo12_robot/solo12_description/solo12_description/meshes/collision/hip_fe_fl.stl</uri>
           </mesh>
         </geometry>
       </collision>
@@ -80,7 +80,7 @@
         <geometry>
           <mesh>
             <scale>1 1 1</scale>
-            <uri>file:///home/pratik/sdp_ws/src/install/solo12_description/share/solo12_description/meshes/collision/hip_fe_fl.stl</uri>
+            <uri>file:///home/pratik/sdp/Old_Files/solo12_robot/solo12_description/solo12_description/meshes/collision/hip_fe_fl.stl</uri>
           </mesh>
         </geometry>
       </visual>
@@ -124,7 +124,7 @@
         <geometry>
           <mesh>
             <scale>1 1 1</scale>
-            <uri>file:///home/pratik/sdp_ws/src/install/solo12_description/share/solo12_description/meshes/collision/isolated_upper_leg_left_side.stl</uri>
+            <uri>file:///home/pratik/sdp/Old_Files/solo12_robot/solo12_description/solo12_description/meshes/collision/isolated_upper_leg_left_side.stl</uri>
           </mesh>
         </geometry>
       </collision>
@@ -133,7 +133,7 @@
         <geometry>
           <mesh>
             <scale>1 1 1</scale>
-            <uri>file:///home/pratik/sdp_ws/src/install/solo12_description/share/solo12_description/meshes/collision/isolated_upper_leg_left_side.stl</uri>
+            <uri>file:///home/pratik/sdp/Old_Files/solo12_robot/solo12_description/solo12_description/meshes/collision/isolated_upper_leg_left_side.stl</uri>
           </mesh>
         </geometry>
       </visual>
@@ -177,7 +177,7 @@
         <geometry>
           <mesh>
             <scale>1 1 1</scale>
-            <uri>file:///home/pratik/sdp_ws/src/install/solo12_description/share/solo12_description/meshes/collision/isolated_lower_leg_v2_left_side.stl</uri>
+            <uri>file:///home/pratik/sdp/Old_Files/solo12_robot/solo12_description/solo12_description/meshes/collision/isolated_lower_leg_v2_left_side.stl</uri>
           </mesh>
         </geometry>
       </collision>
@@ -186,7 +186,7 @@
         <geometry>
           <mesh>
             <scale>1 1 1</scale>
-            <uri>file:///home/pratik/sdp_ws/src/install/solo12_description/share/solo12_description/meshes/collision/isolated_lower_leg_v2_left_side.stl</uri>
+            <uri>file:///home/pratik/sdp/Old_Files/solo12_robot/solo12_description/solo12_description/meshes/collision/isolated_lower_leg_v2_left_side.stl</uri>
           </mesh>
         </geometry>
       </visual>
@@ -230,7 +230,7 @@
         <geometry>
           <mesh>
             <scale>1 1 1</scale>
-            <uri>file:///home/pratik/sdp_ws/src/install/solo12_description/share/solo12_description/meshes/collision/hip_fe_fr.stl</uri>
+            <uri>file:///home/pratik/sdp/Old_Files/solo12_robot/solo12_description/solo12_description/meshes/collision/hip_fe_fr.stl</uri>
           </mesh>
         </geometry>
       </collision>
@@ -239,7 +239,7 @@
         <geometry>
           <mesh>
             <scale>1 1 1</scale>
-            <uri>file:///home/pratik/sdp_ws/src/install/solo12_description/share/solo12_description/meshes/collision/hip_fe_fr.stl</uri>
+            <uri>file:///home/pratik/sdp/Old_Files/solo12_robot/solo12_description/solo12_description/meshes/collision/hip_fe_fr.stl</uri>
           </mesh>
         </geometry>
       </visual>
@@ -283,7 +283,7 @@
         <geometry>
           <mesh>
             <scale>1 1 1</scale>
-            <uri>file:///home/pratik/sdp_ws/src/install/solo12_description/share/solo12_description/meshes/collision/isolated_upper_leg_right_side.stl</uri>
+            <uri>file:///home/pratik/sdp/Old_Files/solo12_robot/solo12_description/solo12_description/meshes/collision/isolated_upper_leg_right_side.stl</uri>
           </mesh>
         </geometry>
       </collision>
@@ -292,7 +292,7 @@
         <geometry>
           <mesh>
             <scale>1 1 1</scale>
-            <uri>file:///home/pratik/sdp_ws/src/install/solo12_description/share/solo12_description/meshes/collision/isolated_upper_leg_right_side.stl</uri>
+            <uri>file:///home/pratik/sdp/Old_Files/solo12_robot/solo12_description/solo12_description/meshes/collision/isolated_upper_leg_right_side.stl</uri>
           </mesh>
         </geometry>
       </visual>
@@ -336,7 +336,7 @@
         <geometry>
           <mesh>
             <scale>1 1 1</scale>
-            <uri>file:///home/pratik/sdp_ws/src/install/solo12_description/share/solo12_description/meshes/collision/isolated_lower_leg_v2_right_side.stl</uri>
+            <uri>file:///home/pratik/sdp/Old_Files/solo12_robot/solo12_description/solo12_description/meshes/collision/isolated_lower_leg_v2_right_side.stl</uri>
           </mesh>
         </geometry>
       </collision>
@@ -345,7 +345,7 @@
         <geometry>
           <mesh>
             <scale>1 1 1</scale>
-            <uri>file:///home/pratik/sdp_ws/src/install/solo12_description/share/solo12_description/meshes/collision/isolated_lower_leg_v2_right_side.stl</uri>
+            <uri>file:///home/pratik/sdp/Old_Files/solo12_robot/solo12_description/solo12_description/meshes/collision/isolated_lower_leg_v2_right_side.stl</uri>
           </mesh>
         </geometry>
       </visual>
@@ -389,7 +389,7 @@
         <geometry>
           <mesh>
             <scale>1 1 1</scale>
-            <uri>file:///home/pratik/sdp_ws/src/install/solo12_description/share/solo12_description/meshes/collision/hip_fe_hl.stl</uri>
+            <uri>file:///home/pratik/sdp/Old_Files/solo12_robot/solo12_description/solo12_description/meshes/collision/hip_fe_hl.stl</uri>
           </mesh>
         </geometry>
       </collision>
@@ -398,7 +398,7 @@
         <geometry>
           <mesh>
             <scale>1 1 1</scale>
-            <uri>file:///home/pratik/sdp_ws/src/install/solo12_description/share/solo12_description/meshes/collision/hip_fe_hl.stl</uri>
+            <uri>file:///home/pratik/sdp/Old_Files/solo12_robot/solo12_description/solo12_description/meshes/collision/hip_fe_hl.stl</uri>
           </mesh>
         </geometry>
       </visual>
@@ -442,7 +442,7 @@
         <geometry>
           <mesh>
             <scale>1 1 1</scale>
-            <uri>file:///home/pratik/sdp_ws/src/install/solo12_description/share/solo12_description/meshes/collision/isolated_upper_leg_left_side.stl</uri>
+            <uri>file:///home/pratik/sdp/Old_Files/solo12_robot/solo12_description/solo12_description/meshes/collision/isolated_upper_leg_left_side.stl</uri>
           </mesh>
         </geometry>
       </collision>
@@ -451,7 +451,7 @@
         <geometry>
           <mesh>
             <scale>1 1 1</scale>
-            <uri>file:///home/pratik/sdp_ws/src/install/solo12_description/share/solo12_description/meshes/collision/isolated_upper_leg_left_side.stl</uri>
+            <uri>file:///home/pratik/sdp/Old_Files/solo12_robot/solo12_description/solo12_description/meshes/collision/isolated_upper_leg_left_side.stl</uri>
           </mesh>
         </geometry>
       </visual>
@@ -495,7 +495,7 @@
         <geometry>
           <mesh>
             <scale>1 1 1</scale>
-            <uri>file:///home/pratik/sdp_ws/src/install/solo12_description/share/solo12_description/meshes/collision/isolated_lower_leg_v2_left_side.stl</uri>
+            <uri>file:///home/pratik/sdp/Old_Files/solo12_robot/solo12_description/solo12_description/meshes/collision/isolated_lower_leg_v2_left_side.stl</uri>
           </mesh>
         </geometry>
       </collision>
@@ -504,7 +504,7 @@
         <geometry>
           <mesh>
             <scale>1 1 1</scale>
-            <uri>file:///home/pratik/sdp_ws/src/install/solo12_description/share/solo12_description/meshes/collision/isolated_lower_leg_v2_left_side.stl</uri>
+            <uri>file:///home/pratik/sdp/Old_Files/solo12_robot/solo12_description/solo12_description/meshes/collision/isolated_lower_leg_v2_left_side.stl</uri>
           </mesh>
         </geometry>
       </visual>
@@ -548,7 +548,7 @@
         <geometry>
           <mesh>
             <scale>1 1 1</scale>
-            <uri>file:///home/pratik/sdp_ws/src/install/solo12_description/share/solo12_description/meshes/collision/hip_fe_hr.stl</uri>
+            <uri>file:///home/pratik/sdp/Old_Files/solo12_robot/solo12_description/solo12_description/meshes/collision/hip_fe_hr.stl</uri>
           </mesh>
         </geometry>
       </collision>
@@ -557,7 +557,7 @@
         <geometry>
           <mesh>
             <scale>1 1 1</scale>
-            <uri>file:///home/pratik/sdp_ws/src/install/solo12_description/share/solo12_description/meshes/collision/hip_fe_hr.stl</uri>
+            <uri>file:///home/pratik/sdp/Old_Files/solo12_robot/solo12_description/solo12_description/meshes/collision/hip_fe_hr.stl</uri>
           </mesh>
         </geometry>
       </visual>
@@ -601,7 +601,7 @@
         <geometry>
           <mesh>
             <scale>1 1 1</scale>
-            <uri>file:///home/pratik/sdp_ws/src/install/solo12_description/share/solo12_description/meshes/collision/isolated_upper_leg_right_side.stl</uri>
+            <uri>file:///home/pratik/sdp/Old_Files/solo12_robot/solo12_description/solo12_description/meshes/collision/isolated_upper_leg_right_side.stl</uri>
           </mesh>
         </geometry>
       </collision>
@@ -610,7 +610,7 @@
         <geometry>
           <mesh>
             <scale>1 1 1</scale>
-            <uri>file:///home/pratik/sdp_ws/src/install/solo12_description/share/solo12_description/meshes/collision/isolated_upper_leg_right_side.stl</uri>
+            <uri>file:///home/pratik/sdp/Old_Files/solo12_robot/solo12_description/solo12_description/meshes/collision/isolated_upper_leg_right_side.stl</uri>
           </mesh>
         </geometry>
       </visual>
@@ -654,7 +654,7 @@
         <geometry>
           <mesh>
             <scale>1 1 1</scale>
-            <uri>file:///home/pratik/sdp_ws/src/install/solo12_description/share/solo12_description/meshes/collision/isolated_lower_leg_v2_right_side.stl</uri>
+            <uri>file:///home/pratik/sdp/Old_Files/solo12_robot/solo12_description/solo12_description/meshes/collision/isolated_lower_leg_v2_right_side.stl</uri>
           </mesh>
         </geometry>
       </collision>
@@ -663,7 +663,7 @@
         <geometry>
           <mesh>
             <scale>1 1 1</scale>
-            <uri>file:///home/pratik/sdp_ws/src/install/solo12_description/share/solo12_description/meshes/collision/isolated_lower_leg_v2_right_side.stl</uri>
+            <uri>file:///home/pratik/sdp/Old_Files/solo12_robot/solo12_description/solo12_description/meshes/collision/isolated_lower_leg_v2_right_side.stl</uri>
           </mesh>
         </geometry>
       </visual>
