@@ -24,7 +24,7 @@ def generate_launch_description():
     declared_arguments.append(
         DeclareLaunchArgument(
             "stand",
-            default_value="false",
+            default_value="true",
             description="Spawn stand for the robot."
         )
     )

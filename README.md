@@ -21,7 +21,7 @@ ros2 launch solo12_bringup robot.launch.py
 ```
 
 Launch arguments:
-- `stand`: Spawn robot on stand (default false).
+- `stand`: Spawn robot on stand (default true).
 - `use_rviz`: Run rviz (default true).
 
 Example:
