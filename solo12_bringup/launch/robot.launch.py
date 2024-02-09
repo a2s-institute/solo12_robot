@@ -129,7 +129,8 @@ def generate_launch_description():
         parameters=[
             robot_controllers
         ],
-        output="both"
+        output="both",
+        emulate_tty=True
     )
 
 
