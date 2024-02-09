@@ -40,6 +40,14 @@ def generate_launch_description():
         ]
     )
 
+    robot_controllers = PathJoinSubstitution(
+        [
+            FindPackageShare("solo12_description"),
+            "config",
+            "solo12_controllers.yaml"
+        ]
+    )
+
     # Get URDF path
     urdf_path = os.path.join(
         get_package_share_directory("solo12_description"),
@@ -93,7 +101,7 @@ def generate_launch_description():
             ]
         ),
         launch_arguments={
-            "extra_gazebo_args": f"--ros-args --params-file {gazebo_configuration}"
+            # "extra_gazebo_args": f"--ros-args --params-file {gazebo_configuration.perform}" # Harley: fix path substitution
         }.items()
     )
 
@@ -113,6 +121,15 @@ def generate_launch_description():
         executable="spawner",
         arguments=["joint_state_broadcaster", "--controller-manager", "/controller_manager"],
         parameters=[{"use_sim_time": True}]
+    )
+
+    ros2_control_node = Node(
+        package="controller_manager",
+        executable="ros2_control_node",
+        parameters=[
+            robot_controllers
+        ],
+        output="both"
     )
 
 
@@ -151,6 +168,7 @@ def generate_launch_description():
             robot_state_pub_node,
             spawn_entity_node,
             spawn_stand,
+            ros2_control_node,
             joint_state_broadcaster_spawner,
             delay_rviz
         ]
