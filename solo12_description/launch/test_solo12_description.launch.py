@@ -1,13 +1,30 @@
 import os
 import xacro
 from launch import LaunchDescription
-from launch.actions import DeclareLaunchArgument
+from launch.actions import DeclareLaunchArgument, OpaqueFunction
 from launch.substitutions import Command, FindExecutable, LaunchConfiguration, PathJoinSubstitution
 from launch_ros.actions import Node
 from launch_ros.substitutions import FindPackageShare
 from ament_index_python.packages import get_package_share_directory
+from launch.utilities import perform_substitutions
 
-def generate_launch_description():
+def launch_args(context):
+
+    declared_arguments = []
+
+    declared_arguments.append(
+        DeclareLaunchArgument(
+            "use_sim_time",
+            default_value="true",
+        )
+    )
+
+    return declared_arguments
+
+
+def launch_setup(context):
+
+    use_sim_time = LaunchConfiguration("use_sim_time")
 
     package_name = "solo12_description"
 
@@ -27,7 +44,7 @@ def generate_launch_description():
         package="robot_state_publisher",
         executable="robot_state_publisher",
         output="both",
-        parameters=[robot_description, {"use_sim_time": True}],
+        parameters=[robot_description, {"use_sim_time": use_sim_time}],
     )
 
     rviz_node = Node(
@@ -38,10 +55,18 @@ def generate_launch_description():
         arguments=["-d", rviz_config_file]
     )
 
-    return LaunchDescription(
-        [
+    return [
             joint_state_publisher_node,
             robot_state_publisher_node,
             rviz_node,
         ]
-    )
+
+def generate_launch_description():
+
+    ld = LaunchDescription()
+
+    ld.add_action(OpaqueFunction(function=launch_args))
+
+    ld.add_action(OpaqueFunction(function=launch_setup))
+
+    return ld
