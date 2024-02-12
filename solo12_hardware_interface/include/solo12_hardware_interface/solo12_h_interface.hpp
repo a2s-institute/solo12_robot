@@ -23,28 +23,28 @@
 /*Master_board_interfaces can be inlcuded to this and we can call
 them to access the interface parameters*/
 
-namespace gazebo_ros2_control
+using hardware_interface::return_type;
+
+namespace solo12_hardware_interface
 {
+    using CallbackReturn = rclcpp_lifecycle::node_interfaces::LifecycleNodeInterface::CallbackReturn;
+
     class Solo12HardwareInterface : public hardware_interface::SystemInterface
     {
         public:
         RCLCPP_SHARED_PTR_DEFINITIONS(Solo12HardwareInterface);
 
-        HARDWARE_INTERFACE_PUBLIC
+        /*use the exmaple 7 to write the hpp*/
         hardware_interface::CallbackReturn on_init(
             const hardware_interface::HardwareInfo & info) override;
         
-        HARDWARE_INTERFACE_PUBLIC
         std::vector<hardware_interface::StateInterface> export_state_interfaces() override;
 
-        HARDWARE_INTERFACE_PUBLIC
         std::vector<hardware_interface::CommandInterface> export_command_interfaces() override;
 
-        HARDWARE_INTERFACE_PUBLIC
         hardware_interface::return_type read(
             const rclcpp::Time & time, const rclcpp::Duration & period) override;
 
-        HARDWARE_INTERFACE_PUBLIC
         hardware_interface::return_type write(
             const rclcpp::Time & time, const rclcpp::Duration & period) override;
 
@@ -67,7 +67,9 @@ namespace gazebo_ros2_control
         ??? I also dont know how to use it because it is a 1X3 data
         which is available for all the joints, so should I need to
         pass it as normal parameter or list of it???*/
-        
+        std::vector<double> solo12_imu_accelerometer_;
+        // std::vector<double> solo12_imu_gyroscope_;
+        // std::vector<double> solo12_imu_altitude_;
         std::vector<double> solo12_h_position_;
         std::vector<double> solo12_h_velocity_;
         

@@ -1,0 +1,9 @@
+<library path="solo12_harware_interface">
+    <class name="solo12_hardware_interface/Solo12HardwareInterface"
+           type="solo12_hardware_interface::Solo12HardwareInterface"
+           base_class_type="hardware_interface::SystemInterface">
+        <description>
+          This plugin provides a hardware interface for the SOLO12 robot.
+        </description>
+    </class>
+</library>
