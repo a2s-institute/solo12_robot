@@ -1,7 +1,10 @@
 <?xml version="1.0" ?>
 <robot xmlns:xacro="http://www.ros.org/wiki/xacro">
 
-  <xacro:macro name="solo12_ros2_control" params="use_sim"> 
+  <xacro:macro name="solo12_ros2_control" params="
+    use_sim:=true
+    robot_interface:=enp1s0
+    "> 
 
       <ros2_control name="Solo12HardwareInterface" type="system">
         <hardware>
@@ -14,6 +17,7 @@
           <!-- Otherwise launch real hardware -->
           <xacro:unless value="${use_sim}">
             <plugin>solo12_hardware_interface/Solo12HardwareInterface</plugin>
+            <param name="robot_interface">${robot_interface}</param>
           </xacro:unless>
         </hardware>
 

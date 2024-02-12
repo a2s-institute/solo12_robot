@@ -16,6 +16,12 @@ def launch_args(context):
         )
     )
 
+    declared_args.append(
+        DeclareLaunchArgument(
+            "robot_interface",
+            default_value="enp1s0"
+        )
+    )
     return declared_args
 
 def launch_setup(context):
@@ -29,7 +35,8 @@ def launch_setup(context):
             ]
         ).perform(context),
         mappings={
-            "use_sim_time": LaunchConfiguration("use_sim_time").perform(context)
+            "use_sim": LaunchConfiguration("use_sim_time").perform(context),
+            "robot_interface": LaunchConfiguration("robot_interface").perform(context)
         }
     ).toxml()
 

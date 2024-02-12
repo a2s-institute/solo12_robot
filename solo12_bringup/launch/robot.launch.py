@@ -54,6 +54,14 @@ def launch_args(context):
         )
     )
 
+    declared_args.append(
+        DeclareLaunchArgument(
+            "robot_interface",
+            default_value="enp1s0",
+            description="Hardware interface to communicate with solo12 master board."
+        )
+    )
+
     return declared_args
 
 def launch_setup(context):
@@ -67,7 +75,8 @@ def launch_setup(context):
             ]
         ),
         launch_arguments={
-            "use_sim_time": LaunchConfiguration("use_sim")
+            "use_sim_time": LaunchConfiguration("use_sim"),
+            "robot_interface": LaunchConfiguration("robot_interface")
         }.items()
     )
 
@@ -81,7 +90,7 @@ def launch_setup(context):
         ),
         launch_arguments={
             "robot_name": LaunchConfiguration("robot_name"),
-            "stand": LaunchConfiguration("stand")
+            "stand": LaunchConfiguration("stand"),
         }.items(),
         condition=IfCondition(LaunchConfiguration("use_sim"))
     )
