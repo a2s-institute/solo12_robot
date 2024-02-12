@@ -11,14 +11,9 @@
             <plugin>gazebo_ros2_control/GazeboSystem</plugin>
           </xacro:if>
 
-          <!-- 
-            Otherwise launch real hardware
-
-          TODO:
-          - add hardware interface for the robot
-          -->
+          <!-- Otherwise launch real hardware -->
           <xacro:unless value="${use_sim}">
-            <plugin>placeholder_namespace/PlaceHolderClass</plugin>
+            <plugin>solo12_hardware_interface/Solo12HardwareInterface</plugin>
           </xacro:unless>
         </hardware>
 
