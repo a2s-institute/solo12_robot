@@ -27,7 +27,7 @@
         <origin xyz="0 0 0" rpy="0 0 0" />
         <geometry>
       <!-- <box size="0.1 0.1 0.1"/>-->
-      <mesh filename="file:///home/pratik/nala/gazebo_standalone/solo12_robot/solo12_description/meshes/collision/base.${mesh_ext}"/>
+      <mesh filename="file:///home/pratik/Music/sdp/solo12_robot/solo12_description/meshes/collision/base.${mesh_ext}"/>
         </geometry>
         <material name="${color_name}">
             <color rgba="${color} ${opacity}"/>
@@ -37,7 +37,7 @@
     <collision>
         <origin xyz="0 0 0" rpy="0 0 0" />
         <geometry>
-      <mesh filename="file:///home/pratik/nala/gazebo_standalone/solo12_robot/solo12_description/meshes/collision/base.${mesh_ext}"/>
+      <mesh filename="file:///home/pratik/Music/sdp/solo12_robot/solo12_description/meshes/collision/base.${mesh_ext}"/>
         </geometry>
         <material name="${color_name}">
             <color rgba="${color} ${opacity}"/>

@@ -56,13 +56,13 @@
                 <xacro:if value="${is_front}">
                     <origin xyz="0.01950 0 0" rpy="0 0 0" />
                     <geometry>
-              <mesh filename="file:///home/pratik/nala/gazebo_standalone/solo12_robot/solo12_description/meshes/collision/hip_fe_fl.${mesh_ext}"/>
+              <mesh filename="file:///home/pratik/Music/sdp/solo12_robot/solo12_description/meshes/collision/hip_fe_fl.${mesh_ext}"/>
                     </geometry>
                 </xacro:if>
                 <xacro:unless value="${is_front}">
                     <origin xyz="-0.01950 0 0" rpy="0 0 0" />
                     <geometry>
-                      <mesh filename="file:///home/pratik/nala/gazebo_standalone/solo12_robot/solo12_description/meshes/collision/hip_fe_hl.${mesh_ext}"/>
+                      <mesh filename="file:///home/pratik/Music/sdp/solo12_robot/solo12_description/meshes/collision/hip_fe_hl.${mesh_ext}"/>
                     </geometry>
                 </xacro:unless>
             </xacro:unless>
@@ -70,13 +70,13 @@
                 <xacro:if value="${is_front}">
                     <origin xyz="0.01950 0 0" rpy="0 0 0" />
                     <geometry>
-                        <mesh filename="file:///home/pratik/nala/gazebo_standalone/solo12_robot/solo12_description/meshes/collision/hip_fe_fr.${mesh_ext}"/>
+                        <mesh filename="file:///home/pratik/Music/sdp/solo12_robot/solo12_description/meshes/collision/hip_fe_fr.${mesh_ext}"/>
                     </geometry>
                 </xacro:if>
                 <xacro:unless value="${is_front}">
                     <origin xyz="-0.01950 0 0" rpy="0 0 0" />
                     <geometry>
-                        <mesh filename="file:///home/pratik/nala/gazebo_standalone/solo12_robot/solo12_description/meshes/collision/hip_fe_hr.${mesh_ext}"/>
+                        <mesh filename="file:///home/pratik/Music/sdp/solo12_robot/solo12_description/meshes/collision/hip_fe_hr.${mesh_ext}"/>
                     </geometry>
                 </xacro:unless>
             </xacro:if>
@@ -90,13 +90,13 @@
                 <xacro:if value="${is_front}">
                     <origin xyz="0.01950 0 0" rpy="0 0 0" />
                     <geometry>
-                        <mesh filename="file:///home/pratik/nala/gazebo_standalone/solo12_robot/solo12_description/meshes/collision/hip_fe_fl.${mesh_ext}"/>
+                        <mesh filename="file:///home/pratik/Music/sdp/solo12_robot/solo12_description/meshes/collision/hip_fe_fl.${mesh_ext}"/>
                     </geometry>
                 </xacro:if>
                 <xacro:unless value="${is_front}">
                     <origin xyz="-0.01950 0 0" rpy="0 0 0" />
                     <geometry>
-                      <mesh filename="file:///home/pratik/nala/gazebo_standalone/solo12_robot/solo12_description/meshes/collision/hip_fe_hl.${mesh_ext}"/>
+                      <mesh filename="file:///home/pratik/Music/sdp/solo12_robot/solo12_description/meshes/collision/hip_fe_hl.${mesh_ext}"/>
                     </geometry>
                 </xacro:unless>
             </xacro:unless>
@@ -104,13 +104,13 @@
                 <xacro:if value="${is_front}">
                     <origin xyz="0.01950 0 0" rpy="0 0 0" />
                     <geometry>
-                        <mesh filename="file:///home/pratik/nala/gazebo_standalone/solo12_robot/solo12_description/meshes/collision/hip_fe_fr.${mesh_ext}"/>
+                        <mesh filename="file:///home/pratik/Music/sdp/solo12_robot/solo12_description/meshes/collision/hip_fe_fr.${mesh_ext}"/>
                     </geometry>
                 </xacro:if>
                 <xacro:unless value="${is_front}">
                     <origin xyz="-0.01950 0 0" rpy="0 0 0" />
                     <geometry>
-                        <mesh filename="file:///home/pratik/nala/gazebo_standalone/solo12_robot/solo12_description/meshes/collision/hip_fe_hr.${mesh_ext}"/>
+                        <mesh filename="file:///home/pratik/Music/sdp/solo12_robot/solo12_description/meshes/collision/hip_fe_hr.${mesh_ext}"/>
                     </geometry>
                 </xacro:unless>
             </xacro:if>
@@ -238,10 +238,10 @@
         <origin xyz="0 0 0" rpy="0 0 0" />
         <geometry>
           <xacro:unless value="${is_right}">
-            <mesh filename="file:///home/pratik/nala/gazebo_standalone/solo12_robot/solo12_description/meshes/collision/isolated_upper_leg_left_side.${mesh_ext}"/>
+            <mesh filename="file:///home/pratik/Music/sdp/solo12_robot/solo12_description/meshes/collision/isolated_upper_leg_left_side.${mesh_ext}"/>
           </xacro:unless>
           <xacro:if value="${is_right}">
-            <mesh filename="file:///home/pratik/nala/gazebo_standalone/solo12_robot/solo12_description/meshes/collision/isolated_upper_leg_right_side.${mesh_ext}"/>
+            <mesh filename="file:///home/pratik/Music/sdp/solo12_robot/solo12_description/meshes/collision/isolated_upper_leg_right_side.${mesh_ext}"/>
           </xacro:if>
         </geometry>
         <material name="${color_name}">
@@ -253,10 +253,10 @@
         <origin xyz="0 0 0" rpy="0 0 0" />
         <geometry>
           <xacro:unless value="${is_right}">
-            <mesh filename="file:///home/pratik/nala/gazebo_standalone/solo12_robot/solo12_description/meshes/collision/isolated_upper_leg_left_side.${mesh_ext}"/>
+            <mesh filename="file:///home/pratik/Music/sdp/solo12_robot/solo12_description/meshes/collision/isolated_upper_leg_left_side.${mesh_ext}"/>
           </xacro:unless>
           <xacro:if value="${is_right}">
-            <mesh filename="file:///home/pratik/nala/gazebo_standalone/solo12_robot/solo12_description/meshes/collision/isolated_upper_leg_right_side.${mesh_ext}"/>
+            <mesh filename="file:///home/pratik/Music/sdp/solo12_robot/solo12_description/meshes/collision/isolated_upper_leg_right_side.${mesh_ext}"/>
           </xacro:if>
         </geometry>
         <material name="${color_name}">
@@ -325,10 +325,10 @@
         <origin xyz="0 0 0" rpy="0 0 0" />
         <geometry>
           <xacro:unless value="${is_right}">
-            <mesh filename="file:///home/pratik/nala/gazebo_standalone/solo12_robot/solo12_description/meshes/collision/isolated_lower_leg_v2_left_side.${mesh_ext}"/>
+            <mesh filename="file:///home/pratik/Music/sdp/solo12_robot/solo12_description/meshes/collision/isolated_lower_leg_v2_left_side.${mesh_ext}"/>
           </xacro:unless>
           <xacro:if value="${is_right}">
-            <mesh filename="file:///home/pratik/nala/gazebo_standalone/solo12_robot/solo12_description/meshes/collision/isolated_lower_leg_v2_right_side.${mesh_ext}"/>
+            <mesh filename="file:///home/pratik/Music/sdp/solo12_robot/solo12_description/meshes/collision/isolated_lower_leg_v2_right_side.${mesh_ext}"/>
           </xacro:if>
         </geometry>
         <material name="${color_name}">
@@ -340,10 +340,10 @@
         <origin xyz="0 0 0" rpy="0 0 0" />
         <geometry>
           <xacro:unless value="${is_right}">
-            <mesh filename="file:///home/pratik/nala/gazebo_standalone/solo12_robot/solo12_description/meshes/collision/isolated_lower_leg_v2_left_side.${mesh_ext}"/>
+            <mesh filename="file:///home/pratik/Music/sdp/solo12_robot/solo12_description/meshes/collision/isolated_lower_leg_v2_left_side.${mesh_ext}"/>
           </xacro:unless>
           <xacro:if value="${is_right}">
-            <mesh filename="file:///home/pratik/nala/gazebo_standalone/solo12_robot/solo12_description/meshes/collision/isolated_lower_leg_v2_right_side.${mesh_ext}"/>
+            <mesh filename="file:///home/pratik/Music/sdp/solo12_robot/solo12_description/meshes/collision/isolated_lower_leg_v2_right_side.${mesh_ext}"/>
           </xacro:if>
         </geometry>
         <material name="${color_name}">

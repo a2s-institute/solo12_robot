@@ -1,0 +1,42 @@
+<sdf version='1.7'>
+  <model name='stand'>
+    <joint name='fixed' type='fixed'>
+      <pose relative_to='__model__'>0 0 0 0 -0 0</pose>
+      <parent>world</parent>
+      <child>stand_link</child>
+    </joint>
+    <link name='stand_link'>
+      <pose relative_to='fixed'>0 0 0 0 -0 0</pose>
+      <inertial>
+        <pose>0 0 0 0 -0 0</pose>
+        <mass>1</mass>
+        <inertia>
+          <ixx>100</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>100</iyy>
+          <iyz>0</iyz>
+          <izz>100</izz>
+        </inertia>
+      </inertial>
+      <collision name='stand_link_collision'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>file:///home/pratik/Music/sdp/solo12_robot/solo12_description/meshes/collision/stand.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='stand_link_visual'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>file:///home/pratik/Music/sdp/solo12_robot/solo12_description/meshes/collision/stand.stl</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+  </model>
+</sdf>

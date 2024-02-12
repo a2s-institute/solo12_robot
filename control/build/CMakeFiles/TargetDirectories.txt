@@ -1,3 +1,0 @@
-/home/pratik/sdp/Old_Files/solo12_robot/control/build/CMakeFiles/RobotJointController.dir
-/home/pratik/sdp/Old_Files/solo12_robot/control/build/CMakeFiles/edit_cache.dir
-/home/pratik/sdp/Old_Files/solo12_robot/control/build/CMakeFiles/rebuild_cache.dir

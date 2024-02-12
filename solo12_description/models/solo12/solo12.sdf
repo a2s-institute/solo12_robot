@@ -1,6 +1,5 @@
 <sdf version='1.7'>
   <model name='solo'>
-    <plugin name='robot_joint_controller' filename='/home/pratik/nala/gazebo_standalone/solo12_robot/control/build/libRobotJointController.so'/>
     <link name='base_link'>
       <inertial>
         <pose>-0.00083 1e-06 -0.000602 0 -0 0</pose>
@@ -19,7 +18,7 @@
         <geometry>
           <mesh>
             <scale>1 1 1</scale>
-            <uri>file:///home/pratik/nala/gazebo_standalone/solo12_robot/solo12_description/meshes/collision/base.stl</uri>
+            <uri>file:///home/pratik/Music/sdp/solo12_robot/solo12_description/meshes/collision/base.stl</uri>
           </mesh>
         </geometry>
       </collision>
@@ -28,7 +27,7 @@
         <geometry>
           <mesh>
             <scale>1 1 1</scale>
-            <uri>file:///home/pratik/nala/gazebo_standalone/solo12_robot/solo12_description/meshes/collision/base.stl</uri>
+            <uri>file:///home/pratik/Music/sdp/solo12_robot/solo12_description/meshes/collision/base.stl</uri>
           </mesh>
         </geometry>
       </visual>
@@ -72,7 +71,7 @@
         <geometry>
           <mesh>
             <scale>1 1 1</scale>
-            <uri>file:///home/pratik/nala/gazebo_standalone/solo12_robot/solo12_description/meshes/collision/hip_fe_fl.stl</uri>
+            <uri>file:///home/pratik/Music/sdp/solo12_robot/solo12_description/meshes/collision/hip_fe_fl.stl</uri>
           </mesh>
         </geometry>
       </collision>
@@ -81,7 +80,7 @@
         <geometry>
           <mesh>
             <scale>1 1 1</scale>
-            <uri>file:///home/pratik/nala/gazebo_standalone/solo12_robot/solo12_description/meshes/collision/hip_fe_fl.stl</uri>
+            <uri>file:///home/pratik/Music/sdp/solo12_robot/solo12_description/meshes/collision/hip_fe_fl.stl</uri>
           </mesh>
         </geometry>
       </visual>
@@ -125,7 +124,7 @@
         <geometry>
           <mesh>
             <scale>1 1 1</scale>
-            <uri>file:///home/pratik/nala/gazebo_standalone/solo12_robot/solo12_description/meshes/collision/isolated_upper_leg_left_side.stl</uri>
+            <uri>file:///home/pratik/Music/sdp/solo12_robot/solo12_description/meshes/collision/isolated_upper_leg_left_side.stl</uri>
           </mesh>
         </geometry>
       </collision>
@@ -134,7 +133,7 @@
         <geometry>
           <mesh>
             <scale>1 1 1</scale>
-            <uri>file:///home/pratik/nala/gazebo_standalone/solo12_robot/solo12_description/meshes/collision/isolated_upper_leg_left_side.stl</uri>
+            <uri>file:///home/pratik/Music/sdp/solo12_robot/solo12_description/meshes/collision/isolated_upper_leg_left_side.stl</uri>
           </mesh>
         </geometry>
       </visual>
@@ -178,7 +177,7 @@
         <geometry>
           <mesh>
             <scale>1 1 1</scale>
-            <uri>file:///home/pratik/nala/gazebo_standalone/solo12_robot/solo12_description/meshes/collision/isolated_lower_leg_v2_left_side.stl</uri>
+            <uri>file:///home/pratik/Music/sdp/solo12_robot/solo12_description/meshes/collision/isolated_lower_leg_v2_left_side.stl</uri>
           </mesh>
         </geometry>
       </collision>
@@ -187,7 +186,7 @@
         <geometry>
           <mesh>
             <scale>1 1 1</scale>
-            <uri>file:///home/pratik/nala/gazebo_standalone/solo12_robot/solo12_description/meshes/collision/isolated_lower_leg_v2_left_side.stl</uri>
+            <uri>file:///home/pratik/Music/sdp/solo12_robot/solo12_description/meshes/collision/isolated_lower_leg_v2_left_side.stl</uri>
           </mesh>
         </geometry>
       </visual>
@@ -231,7 +230,7 @@
         <geometry>
           <mesh>
             <scale>1 1 1</scale>
-            <uri>file:///home/pratik/nala/gazebo_standalone/solo12_robot/solo12_description/meshes/collision/hip_fe_fr.stl</uri>
+            <uri>file:///home/pratik/Music/sdp/solo12_robot/solo12_description/meshes/collision/hip_fe_fr.stl</uri>
           </mesh>
         </geometry>
       </collision>
@@ -240,7 +239,7 @@
         <geometry>
           <mesh>
             <scale>1 1 1</scale>
-            <uri>file:///home/pratik/nala/gazebo_standalone/solo12_robot/solo12_description/meshes/collision/hip_fe_fr.stl</uri>
+            <uri>file:///home/pratik/Music/sdp/solo12_robot/solo12_description/meshes/collision/hip_fe_fr.stl</uri>
           </mesh>
         </geometry>
       </visual>
@@ -284,7 +283,7 @@
         <geometry>
           <mesh>
             <scale>1 1 1</scale>
-            <uri>file:///home/pratik/nala/gazebo_standalone/solo12_robot/solo12_description/meshes/collision/isolated_upper_leg_right_side.stl</uri>
+            <uri>file:///home/pratik/Music/sdp/solo12_robot/solo12_description/meshes/collision/isolated_upper_leg_right_side.stl</uri>
           </mesh>
         </geometry>
       </collision>
@@ -293,7 +292,7 @@
         <geometry>
           <mesh>
             <scale>1 1 1</scale>
-            <uri>file:///home/pratik/nala/gazebo_standalone/solo12_robot/solo12_description/meshes/collision/isolated_upper_leg_right_side.stl</uri>
+            <uri>file:///home/pratik/Music/sdp/solo12_robot/solo12_description/meshes/collision/isolated_upper_leg_right_side.stl</uri>
           </mesh>
         </geometry>
       </visual>
@@ -337,7 +336,7 @@
         <geometry>
           <mesh>
             <scale>1 1 1</scale>
-            <uri>file:///home/pratik/nala/gazebo_standalone/solo12_robot/solo12_description/meshes/collision/isolated_lower_leg_v2_right_side.stl</uri>
+            <uri>file:///home/pratik/Music/sdp/solo12_robot/solo12_description/meshes/collision/isolated_lower_leg_v2_right_side.stl</uri>
           </mesh>
         </geometry>
       </collision>
@@ -346,7 +345,7 @@
         <geometry>
           <mesh>
             <scale>1 1 1</scale>
-            <uri>file:///home/pratik/nala/gazebo_standalone/solo12_robot/solo12_description/meshes/collision/isolated_lower_leg_v2_right_side.stl</uri>
+            <uri>file:///home/pratik/Music/sdp/solo12_robot/solo12_description/meshes/collision/isolated_lower_leg_v2_right_side.stl</uri>
           </mesh>
         </geometry>
       </visual>
@@ -390,7 +389,7 @@
         <geometry>
           <mesh>
             <scale>1 1 1</scale>
-            <uri>file:///home/pratik/nala/gazebo_standalone/solo12_robot/solo12_description/meshes/collision/hip_fe_hl.stl</uri>
+            <uri>file:///home/pratik/Music/sdp/solo12_robot/solo12_description/meshes/collision/hip_fe_hl.stl</uri>
           </mesh>
         </geometry>
       </collision>
@@ -399,7 +398,7 @@
         <geometry>
           <mesh>
             <scale>1 1 1</scale>
-            <uri>file:///home/pratik/nala/gazebo_standalone/solo12_robot/solo12_description/meshes/collision/hip_fe_hl.stl</uri>
+            <uri>file:///home/pratik/Music/sdp/solo12_robot/solo12_description/meshes/collision/hip_fe_hl.stl</uri>
           </mesh>
         </geometry>
       </visual>
@@ -443,7 +442,7 @@
         <geometry>
           <mesh>
             <scale>1 1 1</scale>
-            <uri>file:///home/pratik/nala/gazebo_standalone/solo12_robot/solo12_description/meshes/collision/isolated_upper_leg_left_side.stl</uri>
+            <uri>file:///home/pratik/Music/sdp/solo12_robot/solo12_description/meshes/collision/isolated_upper_leg_left_side.stl</uri>
           </mesh>
         </geometry>
       </collision>
@@ -452,7 +451,7 @@
         <geometry>
           <mesh>
             <scale>1 1 1</scale>
-            <uri>file:///home/pratik/nala/gazebo_standalone/solo12_robot/solo12_description/meshes/collision/isolated_upper_leg_left_side.stl</uri>
+            <uri>file:///home/pratik/Music/sdp/solo12_robot/solo12_description/meshes/collision/isolated_upper_leg_left_side.stl</uri>
           </mesh>
         </geometry>
       </visual>
@@ -496,7 +495,7 @@
         <geometry>
           <mesh>
             <scale>1 1 1</scale>
-            <uri>file:///home/pratik/nala/gazebo_standalone/solo12_robot/solo12_description/meshes/collision/isolated_lower_leg_v2_left_side.stl</uri>
+            <uri>file:///home/pratik/Music/sdp/solo12_robot/solo12_description/meshes/collision/isolated_lower_leg_v2_left_side.stl</uri>
           </mesh>
         </geometry>
       </collision>
@@ -505,7 +504,7 @@
         <geometry>
           <mesh>
             <scale>1 1 1</scale>
-            <uri>file:///home/pratik/nala/gazebo_standalone/solo12_robot/solo12_description/meshes/collision/isolated_lower_leg_v2_left_side.stl</uri>
+            <uri>file:///home/pratik/Music/sdp/solo12_robot/solo12_description/meshes/collision/isolated_lower_leg_v2_left_side.stl</uri>
           </mesh>
         </geometry>
       </visual>
@@ -549,7 +548,7 @@
         <geometry>
           <mesh>
             <scale>1 1 1</scale>
-            <uri>file:///home/pratik/nala/gazebo_standalone/solo12_robot/solo12_description/meshes/collision/hip_fe_hr.stl</uri>
+            <uri>file:///home/pratik/Music/sdp/solo12_robot/solo12_description/meshes/collision/hip_fe_hr.stl</uri>
           </mesh>
         </geometry>
       </collision>
@@ -558,7 +557,7 @@
         <geometry>
           <mesh>
             <scale>1 1 1</scale>
-            <uri>file:///home/pratik/nala/gazebo_standalone/solo12_robot/solo12_description/meshes/collision/hip_fe_hr.stl</uri>
+            <uri>file:///home/pratik/Music/sdp/solo12_robot/solo12_description/meshes/collision/hip_fe_hr.stl</uri>
           </mesh>
         </geometry>
       </visual>
@@ -602,7 +601,7 @@
         <geometry>
           <mesh>
             <scale>1 1 1</scale>
-            <uri>file:///home/pratik/nala/gazebo_standalone/solo12_robot/solo12_description/meshes/collision/isolated_upper_leg_right_side.stl</uri>
+            <uri>file:///home/pratik/Music/sdp/solo12_robot/solo12_description/meshes/collision/isolated_upper_leg_right_side.stl</uri>
           </mesh>
         </geometry>
       </collision>
@@ -611,7 +610,7 @@
         <geometry>
           <mesh>
             <scale>1 1 1</scale>
-            <uri>file:///home/pratik/nala/gazebo_standalone/solo12_robot/solo12_description/meshes/collision/isolated_upper_leg_right_side.stl</uri>
+            <uri>file:///home/pratik/Music/sdp/solo12_robot/solo12_description/meshes/collision/isolated_upper_leg_right_side.stl</uri>
           </mesh>
         </geometry>
       </visual>
@@ -655,7 +654,7 @@
         <geometry>
           <mesh>
             <scale>1 1 1</scale>
-            <uri>file:///home/pratik/nala/gazebo_standalone/solo12_robot/solo12_description/meshes/collision/isolated_lower_leg_v2_right_side.stl</uri>
+            <uri>file:///home/pratik/Music/sdp/solo12_robot/solo12_description/meshes/collision/isolated_lower_leg_v2_right_side.stl</uri>
           </mesh>
         </geometry>
       </collision>
@@ -664,7 +663,7 @@
         <geometry>
           <mesh>
             <scale>1 1 1</scale>
-            <uri>file:///home/pratik/nala/gazebo_standalone/solo12_robot/solo12_description/meshes/collision/isolated_lower_leg_v2_right_side.stl</uri>
+            <uri>file:///home/pratik/Music/sdp/solo12_robot/solo12_description/meshes/collision/isolated_lower_leg_v2_right_side.stl</uri>
           </mesh>
         </geometry>
       </visual>
@@ -685,5 +684,9 @@
       <pose>0 -0.009 -0.16 0 -0 0</pose>
     </frame>
     <frame name='HR_FOOT' attached_to='HR_ANKLE'/>
+    <plugin name='delayed_loading_plugin' filename='/home/pratik/Music/sdp/solo12_robot/solo12_control/gazebo_plugin/delayed_plugin/build/libDelayedLoading.so'>
+        <delay>0</delay>
+    </plugin>
+    <plugin name='robot_joint_controller' filename='/home/pratik/Music/sdp/solo12_robot/solo12_control/gazebo_plugin/joint_control/build/libRobotJointController.so'/>
   </model>
 </sdf>

@@ -11,10 +11,16 @@
       <uri>model://sun</uri>
     </include>
 
-    <!-- Include your solo12 model -->
+    <!-- Include stand model -->
+    <include>
+      <uri>model://stand</uri>
+    </include>
+
+    <!-- Include your solo12 model with a delay -->
     <include>
       <uri>model://solo12</uri>
+      <pose>0 0 0.54 0 0 0</pose> 
     </include>
+
   </world>
 </sdf>
-

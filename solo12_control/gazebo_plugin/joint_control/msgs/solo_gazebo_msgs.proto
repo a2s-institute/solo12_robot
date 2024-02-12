@@ -1,0 +1,8 @@
+package solo_gazebo_msgs.msgs;
+
+import "vector2d.proto";
+
+message SoloGazeboMsg {
+  required string joint_name = 1;
+  required float position = 2;
+}
