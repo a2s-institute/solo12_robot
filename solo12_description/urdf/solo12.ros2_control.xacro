@@ -24,61 +24,73 @@
 
         <joint name="FL_HAA">
           <command_interface name="velocity"/>
+          <command_interface name="position"/>
           <state_interface name="position"/>
           <state_interface name="velocity"/>
         </joint>
         <joint name="FL_HFE">
           <command_interface name="velocity"/>
+          <command_interface name="position"/>
           <state_interface name="position"/>
           <state_interface name="velocity"/>
         </joint>
         <joint name="FL_KFE">
           <command_interface name="velocity"/>
+          <command_interface name="position"/>
           <state_interface name="position"/>
           <state_interface name="velocity"/>
         </joint>
         <joint name="FR_HAA">
           <command_interface name="velocity"/>
+          <command_interface name="position"/>
           <state_interface name="position"/>
           <state_interface name="velocity"/>
         </joint>
         <joint name="FR_HFE">
           <command_interface name="velocity"/>
+          <command_interface name="position"/>
           <state_interface name="position"/>
           <state_interface name="velocity"/>
         </joint>
         <joint name="FR_KFE">
           <command_interface name="velocity"/>
+          <command_interface name="position"/>
           <state_interface name="position"/>
           <state_interface name="velocity"/>
         </joint>
         <joint name="HL_HAA">
           <command_interface name="velocity"/>
+          <command_interface name="position"/>
           <state_interface name="position"/>
           <state_interface name="velocity"/>
         </joint>
         <joint name="HL_HFE">
           <command_interface name="velocity"/>
+          <command_interface name="position"/>
           <state_interface name="position"/>
           <state_interface name="velocity"/>
         </joint>
         <joint name="HL_KFE">
           <command_interface name="velocity"/>
+          <command_interface name="position"/>
           <state_interface name="position"/>
           <state_interface name="velocity"/>
         </joint>
         <joint name="HR_HAA">
           <command_interface name="velocity"/>
+          <command_interface name="position"/>
           <state_interface name="position"/>
           <state_interface name="velocity"/>
         </joint>
         <joint name="HR_HFE">
           <command_interface name="velocity"/>
+          <command_interface name="position"/>
           <state_interface name="position"/>
           <state_interface name="velocity"/>
         </joint>
         <joint name="HR_KFE">
           <command_interface name="velocity"/>
+          <command_interface name="position"/>
           <state_interface name="position"/>
           <state_interface name="velocity"/>
         </joint>

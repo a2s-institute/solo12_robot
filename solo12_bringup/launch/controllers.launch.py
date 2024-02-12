@@ -52,10 +52,26 @@ def launch_setup(context):
         parameters=[{"use_sim_time": LaunchConfiguration("use_sim_time")}]
     )
 
+    position_controllers_spawner = Node(
+        package="controller_manager",
+        executable="spawner",
+        arguments=["position_controller", "--controller-manager", "/controller_manager"],
+        parameters=[{"use_sim_time": LaunchConfiguration("use_sim_time")}]
+    )
+
+    joint_trajectory_controller_spawner = Node(
+        package="controller_manager",
+        executable="spawner",
+        arguments=["joint_trajectory_controller", "--controller-manager", "/controller_manager"],
+        parameters=[{"use_sim_time": LaunchConfiguration("use_sim_time")}]
+    )
+
     return [
         ros2_control_node,
         joint_state_broadcaster_spawner,
-        velocity_controllers_spawner
+        joint_trajectory_controller_spawner,
+        # velocity_controllers_spawner,
+        position_controllers_spawner
     ]
 
 
