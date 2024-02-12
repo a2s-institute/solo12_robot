@@ -6,10 +6,72 @@ if(CMAKE_COMPILER_IS_GNUCXX OR CMAKE_CXX_COMPILER_ID MATCHES "Clang")
 endif()
 
 # find dependencies
+set(HW_IF_INCLUDE_DEPENDS
+  pluginlib
+  rcpputils
+  hardware_interface
+)
+set(REF_GEN_INCLUDE_DEPENDS
+  kdl_parser
+  rclcpp
+)
+set(CONTROLLER_INCLUDE_DEPENDS
+  pluginlib
+  rcpputils
+  controller_interface
+  realtime_tools
+)
+
+# find dependencies
 find_package(ament_cmake REQUIRED)
-# uncomment the following section in order to fill in
-# further dependencies manually.
-# find_package(<dependency> REQUIRED)
+foreach(Dependency IN ITEMS ${HW_IF_INCLUDE_DEPENDS})
+  find_package(${Dependency} REQUIRED)
+endforeach()
+foreach(Dependency IN ITEMS ${REF_GEN_INCLUDE_DEPENDS})
+  find_package(${Dependency} REQUIRED)
+endforeach()
+foreach(Dependency IN ITEMS ${CONTROLLER_INCLUDE_DEPENDS})
+  find_package(${Dependency} REQUIRED)
+endforeach()
+
+add_library(
+    solo12_hardware_interface
+    SHARED
+    src/solo12_hardware_interface.cpp
+)
+
+target_include_directories(
+  solo12_hardware_interface
+  PUBLIC
+  include
+)
+
+ament_target_dependencies(
+  solo12_hardware_interface
+  hardware_interface
+  rclcpp
+  rclcpp_lifecycle
+)
+
+# Export hardware plugins
+pluginlib_export_plugin_description_file(
+    hardware_interface 
+    solo12_hardware_interface.xml
+)
+
+# INSTALL
+install(
+  TARGETS
+  solo12_hardware_interface
+  RUNTIME DESTINATION bin
+  ARCHIVE DESTINATION lib
+  LIBRARY DESTINATION lib
+)
+
+install(
+  DIRECTORY include/
+  DESTINATION include
+)
 
 if(BUILD_TESTING)
   find_package(ament_lint_auto REQUIRED)
@@ -22,5 +84,20 @@ if(BUILD_TESTING)
   set(ament_cmake_cpplint_FOUND TRUE)
   ament_lint_auto_find_test_dependencies()
 endif()
+
+## EXPORTS
+
+ament_export_include_directories(
+  include
+)
+ament_export_libraries(
+  solo12_hardware_interface
+)
+ament_export_dependencies(
+  hardware_interface
+  pluginlib
+  rclcpp
+  rclcpp_lifecycle
+)
 
 ament_package()
