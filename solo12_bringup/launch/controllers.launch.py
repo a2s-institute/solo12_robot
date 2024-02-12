@@ -45,9 +45,17 @@ def launch_setup(context):
         parameters=[{"use_sim_time": LaunchConfiguration("use_sim_time")}]
     )
 
+    velocity_controllers_spawner = Node(
+        package="controller_manager",
+        executable="spawner",
+        arguments=["velocity_controller", "--controller-manager", "/controller_manager"],
+        parameters=[{"use_sim_time": LaunchConfiguration("use_sim_time")}]
+    )
+
     return [
         ros2_control_node,
-        joint_state_broadcaster_spawner
+        joint_state_broadcaster_spawner,
+        velocity_controllers_spawner
     ]
 
 
