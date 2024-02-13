@@ -107,7 +107,7 @@ def main():
     replace_mesh_references(solo12_robot_path)
     convert_to_sdf(modified_dir)
     sdf_file_path = os.path.join(modified_dir, "solo12.sdf")
-    add_control_plugin_to_sdf(sdf_file_path, solo12_robot_path, delay_seconds=0)
+    add_control_plugin_to_sdf(sdf_file_path, solo12_robot_path, delay_seconds=3)
     move_and_replace_sdf(modified_dir, solo12_robot_path)
 
     print("All operations completed successfully.")

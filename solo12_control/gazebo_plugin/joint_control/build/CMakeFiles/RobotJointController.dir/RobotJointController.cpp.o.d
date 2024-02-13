@@ -2616,4 +2616,5 @@ CMakeFiles/RobotJointController.dir/RobotJointController.cpp.o: \
  /usr/include/gazebo-11/gazebo/physics/SphereShape.hh \
  /usr/include/gazebo-11/gazebo/physics/SurfaceParams.hh \
  /usr/include/gazebo-11/gazebo/physics/UniversalJoint.hh \
- /usr/include/gazebo-11/gazebo/physics/UserCmdManager.hh
+ /usr/include/gazebo-11/gazebo/physics/UserCmdManager.hh \
+ /usr/include/gazebo-11/gazebo/msgs/joint_cmd.pb.h

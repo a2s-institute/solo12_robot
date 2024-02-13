@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Solo12 Control Panel - Robot Simulation and Hardware Control</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        .leg-container { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; }
+        .leg { border: 1px solid #ccc; padding: 10px; }
+        .joint-control { margin-bottom: 20px; }
+        .label { font-weight: bold; display: block; }
+        .slider { width: 100%; }
+        .pid-input { width: 60px; margin-right: 10px; }
+        .control-panel { margin: auto; }
+        .status { margin-top: 20px; }
+        .status span { padding: 5px; border-radius: 5px; }
+        .status .live { background-color: green; color: white; }
+        .status .offline { background-color: red; color: white; }
+        .goal-actual { margin-top: 5px; }
+    </style>
+</head>
+<body>
+    <h2>Solo12 Control Panel - Robot Simulation and Hardware Control</h2>
+    <div class="feature">
+        <label><input type="checkbox" id="stand-checkbox"> Enable Stand</label>
+        <div class="status">Simulation Status: <span id="simulation-status" class="offline">Disconnected</span></div>
+        <div class="status">Hardware Status: <span id="hardware-status" class="offline">Disconnected</span></div>
+        <div class="status">Communication Speed: <span id="communication-speed">-</span> Hz</div>
+    </div>
+    <div class="feature">
+        <h3>Leg Controls</h3>
+        <div class="leg-container" id="legs"></div>
+    </div>
+    <div class="status">WebSocket Status: <span id="ws-status" class="offline">Disconnected</span></div>
+
+    <script>
+        const jointLimits = {
+            "HAA": { min: -1.867, max: 1.876 },
+            "HFE": { min: -3.1, max: 3.1 },
+            "KFE": { min: -3.1, max: 3.1 }
+        };
+
+        const jointConfig = {
+            "FL": ["FL_HAA", "FL_HFE", "FL_KFE"],
+            "FR": ["FR_HAA", "FR_HFE", "FR_KFE"],
+            "HL": ["HL_HAA", "HL_HFE", "HL_KFE"],
+            "HR": ["HR_HAA", "HR_HFE", "HR_KFE"]
+        };
+
+        function createLegControls() {
+            const legsContainer = document.getElementById('legs');
+            Object.entries(jointConfig).forEach(([leg, joints]) => {
+                const legDiv = document.createElement('div');
+                legDiv.className = 'leg';
+                legDiv.innerHTML = `<h4>${leg} Leg</h4>`;
+                joints.forEach(joint => {
+                    const jointType = joint.split('_')[1]; // Extract the joint type (HAA, HFE, KFE)
+                    const limits = jointLimits[jointType];
+                    legDiv.innerHTML += `
+                        <div class="joint-control">
+                            <div class="label">${joint}</div>
+                            GoalPos: <span id="${joint}-goal">0</span><br/>
+                            <input type="range" class="slider" min="${limits.min}" max="${limits.max}" step="0.001" value="0" oninput="updateJoint('${joint}', this.value)">
+                            ActualPos: <span id="${joint}-actual">-</span><br/>
+                            P: <input type="number" class="pid-input" id="${joint}-P" value="2" onchange="updatePID('${joint}')">
+                            I: <input type="number" class="pid-input" id="${joint}-I" value="0" onchange="updatePID('${joint}')">
+                            D: <input type="number" class="pid-input" id="${joint}-D" value="1.0" onchange="updatePID('${joint}')">
+
+                        </div>
+                    `;
+                });
+                legsContainer.appendChild(legDiv);
+            });
+        }
+
+        var ws; // Placeholder for WebSocket connection
+
+        function setupWebSocket() {
+            ws = new WebSocket('ws://localhost:8080');
+            ws.onopen = function() {
+                document.getElementById('ws-status').className = 'live';
+                document.getElementById('ws-status').innerText = 'Connected';
+                updateSimulationStatus(true); // Simulate simulation connection
+                updateHardwareStatus(true); // Simulate hardware connection
+            };
+            ws.onclose = function() {
+                document.getElementById('ws-status').className = 'offline';
+                document.getElementById('ws-status').innerText = 'Disconnected';
+                updateSimulationStatus(false); // Simulate simulation disconnection
+                updateHardwareStatus(false); // Simulate hardware disconnection
+            };
+            ws.onmessage = function(event) {
+                const data = JSON.parse(event.data);
+                // Update simulation and hardware status based on the received data
+                // This is just a placeholder; you'll need to adjust it based on your actual data format
+                if (data.type === 'statusUpdate') {
+                    updateSimulationStatus(data.simulationConnected);
+                    updateHardwareStatus(data.hardwareConnected);
+                    updateCommunicationSpeed(data.communicationSpeed);
+                }
+                // Handle incoming messages, such as updating ActualPos
+                // This will depend on the structure of your messages
+            };
+        }
+
+        function getPIDValues(joint) {
+            return {
+                P: parseFloat(document.getElementById(`${joint}-P`).value),
+                I: parseFloat(document.getElementById(`${joint}-I`).value),
+                D: parseFloat(document.getElementById(`${joint}-D`).value),
+            };
+        }
+
+        function updateJoint(joint, position) {
+            const { P, I, D } = getPIDValues(joint);
+            document.getElementById(`${joint}-goal`).innerText = position;
+            const command = `${joint}#${position}#${P}#${I}#${D}#`;
+            ws.send(command);
+        }
+
+        function updatePID(joint) {
+            const position = parseFloat(document.getElementById(`${joint}-goal`).innerText);
+            const { P, I, D } = getPIDValues(joint);
+            const command = `${joint}#${position}#${P}#${I}#${D}#`;
+            ws.send(command);
+        }
+
+        // Call this function when the document is loaded to set up the UI
+        document.addEventListener('DOMContentLoaded', function() {
+            createLegControls();
+            setupWebSocket();
+        });
+    </script>
+</body>
+</html>

@@ -7,5 +7,8 @@ include_directories(${GAZEBO_INCLUDE_DIRS})
 link_directories(${GAZEBO_LIBRARY_DIRS})
 list(APPEND CMAKE_CXX_FLAGS "${GAZEBO_CXX_FLAGS}")
 
+include_directories(${CMAKE_CURRENT_BINARY_DIR})
+
+
 add_library(RobotJointController SHARED RobotJointController.cpp)
 target_link_libraries(RobotJointController ${GAZEBO_LIBRARIES})

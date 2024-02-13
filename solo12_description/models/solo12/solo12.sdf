@@ -685,7 +685,7 @@
     </frame>
     <frame name='HR_FOOT' attached_to='HR_ANKLE'/>
     <plugin name='delayed_loading_plugin' filename='/home/pratik/Music/sdp/solo12_robot/solo12_control/gazebo_plugin/delayed_plugin/build/libDelayedLoading.so'>
-        <delay>0</delay>
+        <delay>3</delay>
     </plugin>
     <plugin name='robot_joint_controller' filename='/home/pratik/Music/sdp/solo12_robot/solo12_control/gazebo_plugin/joint_control/build/libRobotJointController.so'/>
   </model>
