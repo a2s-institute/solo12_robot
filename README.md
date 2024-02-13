@@ -4,6 +4,7 @@ Script is used to replace mesh reference paths, removing dependency over ROS.
 hardware_interface has inherited master-board functions to communicate with robot as per the example files.
 Further features have to be added in both and testing with hardware is not done.
 
+![Alt text](script/image.png)
 
 # solo12_robot
 
