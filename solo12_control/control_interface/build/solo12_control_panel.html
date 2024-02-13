@@ -23,7 +23,7 @@
     <h2>Solo12 Control Panel - Robot Simulation and Hardware Control</h2>
     <div class="feature">
         <label><input type="checkbox" id="stand-checkbox"> Enable Stand</label>
-        <div class="status">Simulation Status: <span id="simulation-status" class="offline">Disconnected</span></div>
+        <div class="status">Simulation Status: <span id="simulation-status" class="offline">Connected</span></div>
         <div class="status">Hardware Status: <span id="hardware-status" class="offline">Disconnected</span></div>
         <div class="status">Communication Speed: <span id="communication-speed">-</span> Hz</div>
     </div>
@@ -89,12 +89,17 @@
                 updateSimulationStatus(false); // Simulate simulation disconnection
                 updateHardwareStatus(false); // Simulate hardware disconnection
             };
+            ws.onclose = function() {
+                document.getElementById('simulation-status').className = 'live';
+                document.getElementById('simulation-status').innerText = 'Disconnected';
+                updateSimulationStatus(true); // Simulate simulation disconnection
+                updateHardwareStatus(false); // Simulate hardware disconnection
+            };
             ws.onmessage = function(event) {
                 const data = JSON.parse(event.data);
                 // Update simulation and hardware status based on the received data
                 // This is just a placeholder; you'll need to adjust it based on your actual data format
                 if (data.type === 'statusUpdate') {
-                    updateSimulationStatus(data.simulationConnected);
                     updateHardwareStatus(data.hardwareConnected);
                     updateCommunicationSpeed(data.communicationSpeed);
                 }
